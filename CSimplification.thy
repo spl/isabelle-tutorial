@@ -80,7 +80,14 @@ apply (split split_if_asm)
 apply simp
 apply simp
 *)
-apply simp_all
+apply simp_all (* simplify all subgoals *)
 done
+
+(*
+lemma "rev [a] = []"
+using [[simp_trace=true]] (* Enable the Trace Simplifier *)
+apply simp
+done
+*)
 
 end
